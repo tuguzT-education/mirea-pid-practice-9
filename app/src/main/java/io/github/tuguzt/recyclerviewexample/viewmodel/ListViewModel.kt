@@ -14,10 +14,24 @@ class ListViewModel : ViewModel() {
     val people: LiveData<List<Person>> get() = _people
 
     @OptIn(ExperimentalSerializationApi::class)
-    fun loadPeople(context: Context): List<Person> {
+    fun loadPeople(context: Context) {
         val inputStream = context.assets.open("personData.json")
         val people: List<Person> = Json.decodeFromStream(inputStream)
         _people.value = people
-        return people
+    }
+
+    enum class SortBy {
+        Name,
+        Sex,
+        PhoneNumber,
+    }
+
+    fun sortPeople(sortBy: SortBy) {
+        val people = requireNotNull(people.value)
+        _people.value = when (sortBy) {
+            SortBy.Name -> people.sortedBy(Person::name)
+            SortBy.Sex -> people.sortedBy(Person::sex)
+            SortBy.PhoneNumber -> people.sortedBy(Person::phoneNumber)
+        }
     }
 }

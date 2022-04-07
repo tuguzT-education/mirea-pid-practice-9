@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/sort"
+        android:title="@string/sort"
+        android:icon="@drawable/ic_round_sort_24"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/sort_by_name"
+                android:title="@string/by_name" />
+            <item
+                android:id="@+id/sort_by_sex"
+                android:title="@string/by_sex" />
+            <item
+                android:id="@+id/sort_by_phone_number"
+                android:title="@string/by_phone_number" />
+        </menu>
+    </item>
+</menu>

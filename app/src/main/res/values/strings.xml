@@ -2,4 +2,7 @@
 <resources>
     <string name="app_name">RecyclerViewExample</string>
     <string name="sort">Sort</string>
+    <string name="by_name">By name</string>
+    <string name="by_sex">By sex</string>
+    <string name="by_phone_number">By phone number</string>
 </resources>
