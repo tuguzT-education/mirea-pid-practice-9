@@ -1,0 +1,17 @@
+[
+    {
+        "sex": "Male",
+        "name": "Timur Tugushev",
+        "phone_number": 89777941912
+    },
+    {
+        "sex": "Male",
+        "name": "Damir Tugushev",
+        "phone_number": 89777941885
+    },
+    {
+        "sex": "Unknown",
+        "name": "Helicopter Apache",
+        "phone_number": 88005553535
+    }
+]
